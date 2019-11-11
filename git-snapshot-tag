@@ -1,9 +1,14 @@
 #!/bin/sh
 
-snapshot_label=$(echo snapshot/c`hostname`/`date "+%Y-%m-%d_%H%M"`)
+snapshot_label=$(echo snapshot/`hostname`/`date "+%Y-%m-%d_%H%M"`)
 branch=$(git branch | grep \* | cut -d ' ' -f2)
 
 # Check for dirty tree
+
+# check to make sure tag does not already exist
+# or maybe just replace it.
+
+# Also, maybe make it just give up if it sees submodules...
 
 # Discard branch
 git checkout `git rev-parse HEAD`
