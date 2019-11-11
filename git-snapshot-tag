@@ -1,6 +1,6 @@
 #!/bin/sh
 
-snapshot_label=$(echo snapshot/`hostname`/`date "+%Y-%m-%d_%H%M"`)
+snapshot_label=$(echo snapshot/c`hostname`/`date "+%Y-%m-%d_%H%M"`)
 branch=$(git branch | grep \* | cut -d ' ' -f2)
 
 # Check for dirty tree
@@ -20,10 +20,4 @@ git tag ${snapshot_label}
 git reset --soft ${branch}
 git checkout ${branch}
 git reset
-
-# This way is clumsy, and can cause problems.
-#git checkout $(branch) -f
-#git checkout $(snapshot_label) -- .
-#git reset
-
 
