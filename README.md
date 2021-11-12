@@ -3,7 +3,7 @@
 It can be really useful because you may want a complete snapshot of stuff
 that is not normally tracked by git.
 
-Be careful because that this may include your secrets. However, if you are using a tool like (git-crypt)[https://github.com/AGWA/git-crypt] that uses a smudge filter, then this won't decrypt them when it adds it to the cache.
+Be careful because that this may include your secrets. However, if you are using a tool like [git-crypt](https://github.com/AGWA/git-crypt) that uses a smudge filter, then this won't decrypt them when it adds it to the cache.
 
 If you want to commit stuff like node_modules without bloating your repo, the commits that this script creates are leaves and can be deleted later without having to rewrite history.
 
