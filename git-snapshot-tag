@@ -14,7 +14,7 @@ branch=$(git branch | grep '\*' | cut -d ' ' -f2)
 git checkout "$(git rev-parse HEAD)"
 
 # Force add everything
-git add -f .
+git add -f "$@" $( [[ -z $@ ]] && echo "." )
 
 # Add everything to snapshot
 git commit -m "Snapshot $(date)"
