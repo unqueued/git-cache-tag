@@ -11,7 +11,7 @@ branch=$(git branch | grep '\*' | cut -d ' ' -f2)
 # Also, maybe make it just give up if it sees submodules...
 
 # Discard branch
-git checkout "$(git rev-parse HEAD)"
+git -c  advice.detachedHead=false checkout "$(git rev-parse HEAD)"
 
 # Force add everything
 git add -f "$@" $( [[ -z $@ ]] && echo "." )
