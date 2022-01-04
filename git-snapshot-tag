@@ -18,6 +18,7 @@ git add -f "$@" $( [[ -z $@ ]] && echo "." )
 
 # Add everything to snapshot
 git commit -m "Snapshot $(date)"
+echo "Creating tag ${snapshot_label}"
 
 # Create tag
 git tag "${snapshot_label}"
