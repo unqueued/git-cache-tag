@@ -1,0 +1,27 @@
+{
+  "name": "git-cache-tag",
+  "bin": "./git-cache-tag",
+  "version": "1.0.0",
+  "description": "A program that adds all tracked and untracked files to an orphan branch and tags it.",
+  "main": "git-cache-tag",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unqueued/git-cache-tag.git"
+  },
+  "keywords": [
+    "git",
+    "cache",
+    "ci",
+    "tag",
+    "devops"
+  ],
+  "author": "Timothy Sanders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unqueued/git-cache-tag/issues"
+  },
+  "homepage": "https://github.com/unqueued/git-cache-tag#readme"
+}
