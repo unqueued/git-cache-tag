@@ -1,7 +1,7 @@
 {
   "name": "git-cache-tag",
   "bin": "./git-cache-tag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A program that adds all tracked and untracked files to an orphan branch and tags it.",
   "main": "git-cache-tag",
   "scripts": {
