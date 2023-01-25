@@ -14,7 +14,7 @@ branch=$(git branch | grep '\*' | cut -d ' ' -f2)
 git -c  advice.detachedHead=false checkout "$(git rev-parse HEAD)"
 
 # Force add everything
-git add -f "$@" $( [[ -z $@ ]] && echo "." )
+git -c advice.addEmptyPathspec=false  add -f "$@" $( [[ -z $@ ]] && echo "." )
 
 # Add everything to snapshot
 git commit -m "Snapshot $(date)"
