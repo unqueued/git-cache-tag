@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 snapshot_label="snapshot/hostname/$(date +%Y-%m-%d_%H%M)"
 branch=$(git branch | grep '\*' | cut -d ' ' -f2)
